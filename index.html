@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Calculator</title>
+</head>
+<body>
+    <h2>Calculate the total amount of goods purchased by a customer</h2>
+
+    <label>Your Name:</label><input type="text" id="name"><br><br>
+    <label>Price:</label><input type="number" id="price"><br><br>
+    <label>Quantity</label><input type="number" id="quantity"><br><br>
+    
+    <button id="cal">Calculate Total</button>
+
+    <h3 id="output"></h3>
+
+    <script>
+        let name=document.getElementById("name");
+         let result;
+        document.getElementById("cal").onclick=function(){
+             let name=name.value;
+ 
+            let price = Number(document.getElementById(price).value);
+
+            let quantity = Number(document.getElementById("quantity").value);
+             
+            if(price>10000){
+                price=price*0.1;
+                document.getElementById("output").textContent=` your price is ${price}`
+            }
+        }
+    </script>
+</body>
+</html>
